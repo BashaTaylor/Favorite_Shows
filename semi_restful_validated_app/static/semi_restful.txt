@@ -1,0 +1,25 @@
+$ python manage.py runserver
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py shell
+
+show1= Show.objects.create(title='Stranger Things', network='Netflix', release_date='2021-07-15')
+show2= Show.objects.create(title='Brooklyn Nine-Nine', network='NBC', release_date='2013-09-17')
+show3= Show.objects.create(title='Game of Thrones', network='HBO', release_date='2011-04-17')
+show4= Show.objects.create(title='Pushing Daisies', network='ABC', release_date='2007-10-03')
+show5= Show.objects.create(title='Parks and Recreation', network='NBC', release_date='2009-04-09')
+
+$ python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from semi_restful_app.models import *
+>>> show1= Show.objects.create(title='Stranger Things', network='Netflix', release_date='2021-07-15')
+>>> show2= Show.objects.create(title='Brooklyn Nine-Nine', network='NBC', release_date='2013-09-17')
+>>> show3= Show.objects.create(title='Game of Thrones', network='HBO', release_date='2011-04-17')
+>>> show4= Show.objects.create(title='Pushing Daisies', network='ABC', release_date='2007-10-03')
+>>> show5= Show.objects.create(title='Parks and Recreation', network='NBC', release_date='2009-04-09')
+>>> Show.objects.all()
+<QuerySet [<Stranger Things, Netflix, 2021-07-15, )>, <Brooklyn Nine-Nine, NBC, 2013-09-17, )>, <Game of Thrones, HBO, 2011-04-17,
+)>, <Pushing Daisies, ABC, 2007-10-03, )>, <Parks and Recreation, NBC, 2009-04-09, )>]>
+>>>

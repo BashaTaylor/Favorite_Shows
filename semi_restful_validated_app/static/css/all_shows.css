@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    font-family: Lora, serif;
+    background-size: cover;
+    background-image: url(./images/galaxy2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px 10px 0 10px;
+}
+
+h1 {
+    position:absolute;
+    top: 8%;
+    left: 20%;
+    width: 60%;
+    padding: 20px;
+    color: rgb(215, 19, 183);
+    text-shadow: 4px 6px rgba(4, 45, 120, 0.689);
+}
+
+#container {
+    width: 60%;
+    height: 45vh;
+    position:absolute;
+    top: 24%;
+    left: 22%;
+}
+
+table {
+    width: 100%;
+    height: 40%;
+    align-items:center;
+    justify-content: space-between;
+    border: solid 2px rgb(212, 2, 135);
+    text-align:left;
+    background:rgba(2, 2, 91, 0.483);
+    color: white;
+}
+
+#actions_position {
+    padding-left: 5px;
+}
+.id_column {
+    padding-left: 5px;
+}
+
+.row_line {
+    border-left: solid 2px rgb(207, 4, 173);
+    padding-left: 5px;
+}
+
+#show_line {
+    padding-left: 10px;
+}
+
+#links_button {
+    width: 200px;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a, #delete_btn {
+    display: flex;
+}
+
+#delete_btn {
+    text-decoration: underline;
+    text-decoration: blue;
+    
+}
+
+input {
+    color:rgb(42, 42, 245);
+    background-color: rgba(8, 8, 122, 0.513);
+}
+
+#new_show_btn {
+    color: rgb(215, 19, 183);
+    display: inline-block;
+    /* top: 66%;
+    left:22%; */
+}
+
+#show_line {
+    border-left: solid 2px rgb(207, 4, 173);
+    padding-left: 5px;
+}
+
+.span  {
+    padding-left: 5px;
+    padding-right: 5px;
+}

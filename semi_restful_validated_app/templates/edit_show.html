@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/edit_show.css' %}">
+    <title>Edit Show {{show.id}}</title>
+</head>
+
+<body>
+    <div id="container2">
+        <a id="go_back_link2" href="/">Go Back</a>
+        <div id="main2">
+            <h1>Edit Show {{id}}</h1><br>
+            <!-- /shows/{{ show.id }} -->
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/shows/{{show.id}}/update" method="POST">
+                {% csrf_token %}
+                <div class="net_rel_div">
+                    <label id="title_tag" for="title">Title</label>
+                    <input type='text' name='title' value="{{ show.title}}">
+                </div><br>
+
+                <div id="network_date1">
+                    <div class="net_rel_div">
+                        <label for="network">Network</label>
+                        <input type='text' value="{{ show.network}}" name='network'><br>
+                    </div><br>
+                    <div class="net_rel_div">
+                        <label id="date_label" for="release_date">Release Date</label>
+                        <input id="date_box" type="date" name="release_date" id="release date"
+                            value="{{ show.release_date|date:'Y-m-d'}}">
+                    </div>
+                </div><br>
+                <div class="net_rel_div">
+                    <label for="text_area1">Description</label>
+                    <textarea name="description" id="description" cols="40" rows="4">{{ show.description}}</textarea>
+                </div>
+                <button id="update_button" type="submit" value='{{show.update}}'>Update</button>
+                <!-- <input id="create_button2" type="update" value='Update'> -->
+            </form>
+            <a id="go_to_link" href="show">Go to Show</a>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

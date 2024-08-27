@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/all_shows.css' %}">
+    <title>All Shows</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>All Shows</h1>
+        <div id="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="id_column">ID</th>
+                        <th class="row_line">Title</th>
+                        <th class="row_line">Network</th>
+                        <th class="row_line">Release Date</th>
+                        <th class="row_line" id="actions_position">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for show in all_shows %}
+                    <tr>
+                        <td class="id_column">{{show.id}}</td>
+                        <td class="row_line">{{show.title}}</td>
+                        <td class="row_line">{{show.network}}</td>
+                        <td class="row_line">{{show.release_date}}</td>
+                        <td>
+                            <div id="links_button">
+                                <a id="show_line" href="shows/{{show.id}}/show">Show</a><span class="span">|</span>
+                                <a href="shows/{{show.id}}/edit">Edit</a><span class="span">|</span>
+                                <form method="POST" id="delete_btn" action="shows/{{show.id}}/delete">{% csrf_token %} <input type="submit" value="delete"></form>
+                            </div>
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a id="new_show_btn" href="/show/new">Add a New Show</a>
+    </div>
+
+</body>
+
+</html>
