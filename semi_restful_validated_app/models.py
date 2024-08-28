@@ -37,5 +37,3 @@ def no_future(value):
 
 class Member_Registration(models.Model):
     Release_Date=models.DateField(help_text="Enter the date of release", validators=[no_future])
-
-

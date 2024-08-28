@@ -19,7 +19,7 @@ def create(request):
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/show/new')
+            return redirect('/shows/new')
 
         else:
 
