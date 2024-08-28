@@ -10,8 +10,8 @@
 </head>
 <body>
     <div id="container3">
-        <a id="go_back_link" href="/">Go Back</a>
-        <div id="info">
+        
+        <div class="info">
             <h1>TV Show # {{show.id}}</h1>
             <h4>Title:</h4>
             <p>{{ show.title }}</p>
@@ -24,7 +24,19 @@
             <h4>Last Updated:</h4>
             <p>{{ show.updated_at }}</p>
         </div>
-        <div id="links"><a href="/shows/{{show.id}}/edit">Edit</a> | <a href="/shows/{{show.id}}/delete">Delete</a></div>
+        <div class="button-wrapper">
+            <a href="{% url 'edit' show.id %}">
+                <button class="btn" type="button">Edit</button>
+            </a>
+            <form method="POST" id="delete_btn" action="{% url 'delete' show.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this show?');">Delete</button>
+            </form>
+            <button class="btn" type="button" onclick="window.location.href='{% url 'index' %}'">Home</button>
+        </div>
+        <div id="links">
+            <a href="/shows/{{show.id}}/edit">Edit</a> | <a href="/shows/{{show.id}}/delete">Delete</a>
+        </div>
     </div>
 </body>
 </html>

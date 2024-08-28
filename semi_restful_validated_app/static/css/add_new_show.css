@@ -7,47 +7,69 @@
     font-family: Lora, serif;
 }
 
-#container {
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center align content */
     background-color: black;
     min-height: 100vh; /* Ensures the container covers the full viewport height */
     padding: 20px; /* Adds padding around the container */
 }
 
-#main {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-top: 50px;
     background-color: #333; /* Optional: Adds a background color for better contrast */
     padding: 20px; /* Adds padding inside the main div */
     border-radius: 10px; /* Optional: Rounds the corners of the main div */
+    width: 100%;
 }
 
 h1 {
     color: rgb(123, 202, 27);
-    margin: 20px 0 20px 0;
+    margin: 20px 0 30px 0;
 }
 
 label {
     font-size: 16px;
     font-weight: normal;
 }
+
 input, textarea {
     border-radius: 7px;
     padding: 7px;
     font-size: 16px;
+    width: 100%; /* Ensure inputs take full width within their containers */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+ul {
+    color: whitesmoke;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
 }
 
 .button-wrapper {
     display: flex;
     justify-content: center; /* Center align buttons horizontally */
     gap: 10px; /* Space between buttons */
-    margin: 30px 0 20px 0; /* Add some space above the buttons */
+    margin: 30px 0 20px 0;
+    width: 100%; /* Ensure button-wrapper takes full width */
 }
-
 
 .btn {
     background-color: blue;
@@ -58,6 +80,8 @@ input, textarea {
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     font-size: 16px; /* Increases the font size */
     transition: background-color 0.3s; /* Smooth transition for background color on hover */
+    max-width: 150px; /* Set a max-width for buttons */
+    text-align: center; /* Center text inside buttons */
 }
 
 .btn:hover {
@@ -70,15 +94,14 @@ input, textarea {
     color: white;
     font-weight: bold;
     margin-bottom: 10px; /* Adds space between form fields */
+    width: 100%; /* Ensure net_rel_div takes full width */
 }
 
 #network_date1 {
     display: flex;
+    flex-direction: column; /* Stack Network and Release Date fields vertically on smaller screens */
     gap: 20px; /* Adds space between the Network and Release Date fields */
-}
-
-#network_date1 .net_rel_div {
-    flex: 1; /* Allows the fields to stretch equally */
+    width: 100%; /* Ensure it fits within the container */
 }
 
 #date_label {
@@ -91,4 +114,23 @@ input, textarea {
     margin-left: 19px;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) { /* Tablet and mobile devices */
+    .main {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 
+    .button-wrapper {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .btn {
+        max-width: 100%; /* Allow buttons to stretch within their container */
+        width: 100%; /* Ensure buttons take full width within the button-wrapper */
+    }
+
+    #network_date1 {
+        flex-direction: column; /* Stack Network and Release Date fields vertically */
+    }
+}

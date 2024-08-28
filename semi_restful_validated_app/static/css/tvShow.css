@@ -3,43 +3,62 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Lora, serif;
 }
 
 #container3 {
     display: flex;
     flex-direction: column;
-    width: 100pv;
-    min-height: 778px;
-    padding: 30px;
-    font-family: Lora, serif;
-    background-size: cover;
-    background-image: url(./sky.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 10px 10px 0 10px;
-    
+    background-color: black;
+    min-height: 100vh; /* Ensures the container covers the full viewport height */
+    padding: 20px; /* Adds padding around the container */
 }
 
-#go_back_link {
-    color: rgb(27, 27, 236);
-    display: inline-block;
-    text-align: right;
-    padding: 20px 20px 10px;
-    font-weight: bold;
-}
-
-h1 {
-    display: inline-block;
-    padding: 20px;
-    text-shadow: 0 10px 10px rgba(30, 5, 122, 0.965);
-    color: rgb(123, 202, 27);
-}
-
-#info {
+/* #info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+} */
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #333; /* Optional: Adds a background color for better contrast */
+    padding: 20px; /* Adds padding inside the main div */
+    border-radius: 10px; /* Optional: Rounds the corners of the main div */
 }
+
+h1 {
+    color: rgb(123, 202, 27);
+    margin: 20px 0 20px 0;
+    /* display: inline-block; */
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Center align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin: 30px 0 20px 0; /* Add some space above the buttons */
+}
+
+.btn {
+    background-color: blue;
+    color: whitesmoke;
+    padding: 10px 20px; /* Adds padding to the buttons */
+    border: none; /* Removes the default border */
+    border-radius: 7px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 16px; /* Increases the font size */
+    transition: background-color 0.3s; /* Smooth transition for background color on hover */
+}
+
+.btn:hover {
+    background-color: darkblue; /* Changes the background color on hover */
+}
+
+
 
 h4 {
     display: flex;
@@ -56,11 +75,3 @@ p {
     color: rgb(12, 179, 6);
     font-size: large;   
 }
-
-#links {
-    display: inline-block;
-    color: rgb(27, 27, 236);
-    padding: 10px 0 0 20px;
-    font-weight: bold;
-}
-

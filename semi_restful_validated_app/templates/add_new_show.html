@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="main">
+    <div class="container">
+        <div class="main">
             <h1>Add a New Show</h1>
             {% if messages %}
             <ul class="messages">
@@ -21,7 +21,7 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            <form action="/show/create" method="POST">
+            <form action="/shows/create" method="POST">
                 {% csrf_token %}
                 <div class="net_rel_div">
                     <label for="title">Title</label>
