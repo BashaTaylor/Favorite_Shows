@@ -13,19 +13,19 @@
 <body>
     <div class="container">
         <div class="main">
-            <div class="info">
                 <h1>TV Show # {{show.id}}</h1>
-                <h4>Title:</h4>
-                <p>{{ show.title }}</p>
-                <h4>Network:</h4>
-                <p>{{ show.network }}</p>
-                <h4>Release Date:</h4>
-                <p>{{ show.release_date }}</p>
-                <h4>Description:</h4>
-                <p>{{ show.description }}</p>
-                <h4>Last Updated:</h4>
-                <p>{{ show.updated_at }}</p>
-            </div>
+                <div class="content">
+                    <h4>Title:</h4>
+                    <p>{{ show.title }}</p>
+                    <h4>Network:</h4>
+                    <p>{{ show.network }}</p>
+                    <h4>Release Date:</h4>
+                    <p>{{ show.release_date }}</p>
+                    <h4>Description:</h4>
+                    <p>{{ show.description }}</p>
+                    <h4>Last Updated:</h4>
+                    <p>{{ show.updated_at }}</p>
+                </div>
         </div>
         <div class="button-wrapper">
             <a href="{% url 'edit' show.id %}">
