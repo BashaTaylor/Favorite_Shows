@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div id="container2">
-        <a id="go_back_link2" href="/">Go Back</a>
-        <div id="main2">
+    <div id="container">
+        
+        <div id="main">
             <h1>Edit Show {{id}}</h1><br>
             <!-- /shows/{{ show.id }} -->
 
@@ -46,14 +46,12 @@
                     <label for="text_area1">Description</label>
                     <textarea name="description" id="description" cols="40" rows="4">{{ show.description}}</textarea>
                 </div>
-                <button id="update_button" type="submit" value='{{show.update}}'>Update</button>
+                <button class="btn" type="submit" value='{{show.update}}'>Update</button>
                 <!-- <input id="create_button2" type="update" value='Update'> -->
             </form>
             <a id="go_to_link" href="show">Go to Show</a>
-
+            <a id="go_back_link2" href="/">Go Back</a>
         </div>
-
-
     </div>
 
 </body>

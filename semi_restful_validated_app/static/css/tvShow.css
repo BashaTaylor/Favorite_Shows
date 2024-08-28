@@ -3,17 +3,35 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
     font-family: Lora, serif;
 }
 
-#container3 {
+
+.container {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center align content */
     background-color: black;
     min-height: 100vh; /* Ensures the container covers the full viewport height */
     padding: 20px; /* Adds padding around the container */
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #333; /* Optional: Adds a background color for better contrast */
+    padding: 20px; /* Adds padding inside the main div */
+    border-radius: 10px; /* Optional: Rounds the corners of the main div */
+    width: 100%;
+}
+
+h1 {
+    color: rgb(123, 202, 27);
+    margin: 20px 0 30px 0;
+}
 /* #info {
     display: flex;
     flex-direction: column;
