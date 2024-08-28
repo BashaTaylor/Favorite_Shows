@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+    box-sizing: border-box;
     font-family: Lora, serif;
 }
 
@@ -16,10 +16,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align content */
-    background-color: black;
-    min-height: 100vh; /* Ensures the container covers the full viewport height */
-    padding: 20px; /* Adds padding around the container */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .main {
@@ -99,35 +98,29 @@ ul {
 
 #network_date1 {
     display: flex;
-    flex-direction: row;
-}
-
-#network_date2 {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack Network and Release Date fields vertically on smaller screens */
+    gap: 20px; /* Adds space between the Network and Release Date fields */
+    width: 100%; /* Ensure it fits within the container */
 }
 
 #date_label {
-    margin-left: 9px;
+    margin-left: 19px;
 }
 
 #date_box {
-    height: 16px;
-    width: 132px;
-    margin-left: 9px;
+    height: 37.8px;
+    width: 431.4px;
 }
 
-#update_button {
-    display: block;
-    margin: 20px auto 20px auto;
-    box-shadow: 5px 7px rgba(23, 8, 123, 0.42);
-}
-
-#go_to_link {
+#go_to_link, #go_back_link2 {
     color: rgb(243, 23, 188);
+    text-decoration: none;
     display: inline-block;
-    flex-direction: row;
-    text-align: center;
+    margin-right: 10px;
+}
+
+#go_to_link:hover, #go_back_link2:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries for Responsive Design */

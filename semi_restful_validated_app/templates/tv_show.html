@@ -15,17 +15,28 @@
         <div class="main">
                 <h1>TV Show # {{show.id}}</h1>
                 <div class="content">
-                    <h4>Title:</h4>
-                    <p>{{ show.title }}</p>
-                    <h4>Network:</h4>
-                    <p>{{ show.network }}</p>
-                    <h4>Release Date:</h4>
-                    <p>{{ show.release_date }}</p>
-                    <h4>Description:</h4>
-                    <p>{{ show.description }}</p>
-                    <h4>Last Updated:</h4>
-                    <p>{{ show.updated_at }}</p>
+                    <div>
+                        <h3>Title:</h3>
+                        <p>{{ show.title }}</p>
+                    </div>
+                    <div>
+                        <h3>Network:</h3>
+                        <p>{{ show.network }}</p>
+                    </div>
+                    <div>
+                        <h3>Release Date:</h3>
+                        <p>{{ show.release_date }}</p>
+                    </div>
+                    <div>
+                        <h3>Description:</h3>
+                        <p>{{ show.description }}</p>
+                    </div>
+                    <div>
+                        <h3>Last Updated:</h3>
+                        <p>{{ show.updated_at }}</p>
+                    </div>
                 </div>
+                
         </div>
         <div class="button-wrapper">
             <a href="{% url 'edit' show.id %}">

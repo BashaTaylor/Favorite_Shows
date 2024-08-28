@@ -20,11 +20,9 @@
 .main {
     display: flex;
     flex-direction: column;
-    
-    margin-top: 30px;
-    
+    margin-top: 50px;
     background-color: #333; /* Optional: Adds a background color for better contrast */
-    padding: 20px; /* Adds padding inside the main div */
+    padding: 50px 120px 50px 120px; /* Adds padding inside the main div */
     border-radius: 10px; /* Optional: Rounds the corners of the main div */
     width: 100%;
 }
@@ -32,22 +30,38 @@
 h1 {
     color: rgb(123, 202, 27);
     margin: 0 auto;
-    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .content {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items:flex-start;
     margin-bottom: 30px;
-
 }
-/* #info {
+
+.content > div {
     display: flex;
-    
-} */
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: rgb(123, 202, 27);
+    margin: 0;
+    min-width: 150px; /* Adjust to ensure all h3 align properly */
+    text-align: right; /* Align text to the right */
+    padding-right: 20px; /* Increase space between h3 and p */
+}
+
+p {
+    margin: 0;
+    flex: 1;
+    font-size: large;
+}
+
+
+
 
 .button-wrapper {
     display: flex;
@@ -73,15 +87,10 @@ h1 {
 
 
 
-h4 {
+/* h4 {
     display: flex;
     padding: 10px 0 0 20px;
     margin-left: 20px;
-}
+} */
 
-p {
-    display: flex;
-    padding: 10px;
-    margin-left: 150px;
-    font-size: large;   
-}
+

@@ -11,12 +11,10 @@
 </head>
 
 <body>
-    <div id="container">
-        
-        <div id="main">
-            <h1>Edit Show {{id}}</h1><br>
-            <!-- /shows/{{ show.id }} -->
-
+    <div class="container">
+        <div class="main">
+            <h1>Edit Show {{show.id}}</h1>
+            
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -24,36 +22,40 @@
                 {% endfor %}
             </ul>
             {% endif %}
+            
             <form action="/shows/{{show.id}}/update" method="POST">
                 {% csrf_token %}
                 <div class="net_rel_div">
-                    <label id="title_tag" for="title">Title</label>
-                    <input type='text' name='title' value="{{ show.title}}">
-                </div><br>
+                    <label for="title">Title</label>
+                    <input type='text' name='title' value="{{ show.title }}">
+                </div>
 
                 <div id="network_date1">
                     <div class="net_rel_div">
                         <label for="network">Network</label>
-                        <input type='text' value="{{ show.network}}" name='network'><br>
-                    </div><br>
-                    <div class="net_rel_div">
-                        <label id="date_label" for="release_date">Release Date</label>
-                        <input id="date_box" type="date" name="release_date" id="release date"
-                            value="{{ show.release_date|date:'Y-m-d'}}">
+                        <input type='text' name='network' value="{{ show.network }}">
                     </div>
-                </div><br>
-                <div class="net_rel_div">
-                    <label for="text_area1">Description</label>
-                    <textarea name="description" id="description" cols="40" rows="4">{{ show.description}}</textarea>
+                    
+                    <div class="net_rel_div">
+                        <label for="release_date">Release Date</label>
+                        <input id="date_box" type="date" name="release_date" value="{{ show.release_date|date:'Y-m-d' }}">
+                    </div>
                 </div>
-                <button class="btn" type="submit" value='{{show.update}}'>Update</button>
-                <!-- <input id="create_button2" type="update" value='Update'> -->
+                
+                <div class="net_rel_div">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="40" rows="4">{{ show.description }}</textarea>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="btn" type="submit">Update</button>
+                    <button class="btn" type="button" onclick="window.location.href='show'">Go to Show</button>
+                    <button class="btn" type="button" onclick="window.location.href='/'">Home</button>
+                </div>
             </form>
-            <a id="go_to_link" href="show">Go to Show</a>
-            <a id="go_back_link2" href="/">Go Back</a>
+            
         </div>
     </div>
-
 </body>
 
 </html>
