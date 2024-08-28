@@ -25,7 +25,9 @@ SECRET_KEY = 'd&!=2hobd*xe004i@3br6b$uatz8+@+g4c)w(ec86&=-t-4kvp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['favorite-shows.onrender.com', 'localhost']
+
+
 
 
 # Application definition
