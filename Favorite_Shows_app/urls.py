@@ -1,9 +1,6 @@
 from django.urls import path
 from .import views
 
-from django.urls import path
-from . import views
-
 urlpatterns = [
     path('', views.index, name='index'),  # Display all shows
     path('shows', views.index, name='all_shows'),  # Optional: a route for listing all shows

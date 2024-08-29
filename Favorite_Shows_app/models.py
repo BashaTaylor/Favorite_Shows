@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib import messages
+from datetime import date
+from django.core.exceptions import ValidationError
 
 class ShowManager(models.Manager):
     def basic_validator(self, postData):
@@ -25,10 +27,7 @@ class Show(models.Model):
 
     def __repr__(self):
         return f'<{self.title}, {self.network}, {self.release_date}, {self.description})>'
-
-from datetime import date
-from django.core.exceptions import ValidationError
-from django.db import models
+    
 
 def no_future(value):
     today = date.today()

@@ -33,7 +33,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Application definition
 
 INSTALLED_APPS = [
-    'semi_restful_validated_app',
+    'Favorite_Shows_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'semi_restful_validated.urls'
+ROOT_URLCONF = 'Favorite_Shows.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'semi_restful_validated.wsgi.application'
+WSGI_APPLICATION = 'Favorite_Shows.wsgi.application'
 
 
 # Database
