@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['favorite-shows.onrender.com', 'localhost']
 
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Application definition
 

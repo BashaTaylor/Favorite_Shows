@@ -14,7 +14,7 @@ class ShowManager(models.Manager):
         return errors
 
 class Show(models.Model):
-
+    id = models.BigAutoField(primary_key=True)  # or models.AutoField if you want the default
     title = models.CharField(max_length=255)
     network = models.CharField(max_length=255)
     release_date = models.DateField()
@@ -35,5 +35,5 @@ def no_future(value):
     if value > today:
         raise ValidationError('Release date cannot be in the future.')
 
-class Member_Registration(models.Model):
-    Release_Date=models.DateField(help_text="Enter the date of release", validators=[no_future])
+class MemberRegistration(models.Model):
+    id = models.BigAutoField(primary_key=True)  # or models.AutoField if you want the default
