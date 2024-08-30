@@ -133,3 +133,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'Favorite_Shows_app/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://favorite-shows.onrender.com',
+    'http://favorite-shows.onrender.com',
+]
